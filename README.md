@@ -34,8 +34,6 @@ sudo vi /etc/group
 // add solana to the `google-sudoers` like so:
 // google-sudoers:x:1000:abourget,julien,stepd,colin,maoueh,billettc,solana
 sudo su solana
-sudo apt install byobu
-sudo apt install htop vim tig
 cd ~
 git clone https://github.com/streamingfast/solana-mindreader
 cd solana-mindreader
