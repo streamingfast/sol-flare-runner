@@ -1,4 +1,4 @@
-env bash
+#!/usr/bin/env bash
 
 set -e
 TAG="v1.8.x-dm-33abc5ba3-8c293c0-c8c05551ee"

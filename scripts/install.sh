@@ -8,3 +8,6 @@ cp identity.json ~/app/identity.json
 cp start.sh ~/app/start.sh
 cp monitor.sh ~/app/monitor.sh
 
+chmod a+x ~/app/download.sh
+chmod a+x ~/app/start.sh
+chmod a+x ~/app/monitor.sh
