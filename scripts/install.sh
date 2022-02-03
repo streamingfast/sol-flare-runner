@@ -14,6 +14,14 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo apt install byobu
 sudo apt install htop vim tig
 
+echo "Added user to docker group"
+sudo usermod -a -G docker abourget
+sudo usermod -a -G docker julien
+sudo usermod -a -G docker solana
+sudo usermod -a -G docker stepd
+sudo usermod -a -G docker colin
+sudo usermod -a -G docker billettc
+
 echo "create app content"
 mkdir -p ~/app
 cp config.yaml ~/app/config.yaml

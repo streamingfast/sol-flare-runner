@@ -31,8 +31,7 @@ Run the following commands once SSHed into the machine
 ```bash
 sudo adduser solana
 sudo vi /etc/group
-// add solana to the `google-sudoers` like so:
-// google-sudoers:x:1000:abourget,julien,stepd,colin,maoueh,billettc,solana
+sudo usermod -a -G google-sudoers solana
 sudo su solana
 cd ~
 git clone https://github.com/streamingfast/solana-mindreader
