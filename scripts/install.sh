@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 
+set -e
+set -u
+set -o pipefail
+
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+echo "Setup drive"
+sudo apt-get update
+sudo apt-get -y install lvm2
+sudo mkdir -p /data
+sudo pvcreate /dev/nvme0n{1,2,3,4,5,6,7,8}
+sudo vgcreate vg0 /dev/nvme0n{1,2,3,4,5,6,7,8}
+sudo lvcreate vg0 -n data -i8 -I64 -l 100%FREE
+sudo mkfs.ext4 /dev/vg0/data
+sudo mount -o relatime,nobarrier /dev/vg0/data /data
+sudo chown -R solana /data
 
 echo "Installing tooling"
 sudo apt-get update
@@ -33,3 +48,7 @@ cp monitor.sh ~/app/monitor.sh
 chmod a+x ~/app/download.sh
 chmod a+x ~/app/start.sh
 chmod a+x ~/app/monitor.sh
+
+
+echo "Tooning"
+sudo sysctl -w vm.max_map_count=500000
