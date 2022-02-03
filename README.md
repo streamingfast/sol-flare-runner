@@ -39,6 +39,7 @@ sudo apt install htop vim tig
 cd ~
 git clone https://github.com/streamingfast/solana-mindreader
 cd solana-mindreader
+./scripts/install.sh
 
 ```
 
