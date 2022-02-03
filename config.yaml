@@ -1,0 +1,16 @@
+start:
+  args:
+    - mindreader-node
+  flags:
+    log-to-file: false
+    common-oneblock-store-url: gs://dfuseio-global-blocks-us/sol-mainnet/v8-oneblock
+    common-block-data-store-url: gs://dfuseio-global-blocks-us/sol-mainnet/v8-block-data
+    common-blocks-store-url: gs://dfuseio-global-blocks-us/sol-mainnet/v8
+    mindreader-node-grpc-listen-addr: ":9000"
+    mindreader-node-merge-and-store-directly: false
+    mindreader-node-network: "mainnet-beta"
+    mindreader-node-debug-deep-mind: false
+    mindreader-node-log-to-zap: true
+    data-dir: "/data/sf-data"
+    mindreader-node-deepmind-batch-files-path: "/deepmind-ram-disk/"
+    mindreader-node-extra-arguments: "--snapshot-interval-slots 1500 --deepmind --known-validator 7Np41oeYqPefeNQEHSv1UDhYrehxin3NStELsSKCT4K2 --known-validator GdnSyH3YtwcxFvQrVVJMm1JhTS4QVX7MFsX56uJLUfiZ --known-validator DE1bawNcRJB9rVm3buyMVfr8mBEoyyu73NBovf2oXJsJ --known-validator CakcnaRDHka2gXyfbEd2d3xsvkJkqsLw2akB3zsN1D2S --only-known-rpc --private-rpc --dynamic-port-range 8000-8010 --entrypoint entrypoint.mainnet-beta.solana.com:8001 --entrypoint entrypoint2.mainnet-beta.solana.com:8001 --entrypoint entrypoint3.mainnet-beta.solana.com:8001 --entrypoint entrypoint4.mainnet-beta.solana.com:8001 --entrypoint entrypoint5.mainnet-beta.solana.com:8001 --expected-genesis-hash 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d --wal-recovery-mode skip_any_corrupted_record --identity ./identity.json --no-poh-speed-test"
